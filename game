@@ -1,0 +1,76 @@
+var deadColor, days, watered, overH20, element, greenColor;
+
+days = [];
+watered = [];
+deadColor = "#fdd33e";
+greenColor = 'rgba(0, 255, 0,1)';
+overH20 = '#827717';
+element = document.getElementById("backyard");
+
+document.querySelector('.waterNow').style.display = 'none';
+document.querySelector('.nextDay').style.display = 'none';
+
+document.querySelector('.start').addEventListener('click', function() {
+
+  document.querySelector('.start').style.display = 'none'
+  document.querySelector('.waterNow').style.display = 'block'
+  document.querySelector('.nextDay').style.display = 'block'
+
+document.querySelector('.nextDay').addEventListener('click', function() {
+  element.style.background = deadColor;
+ })
+ 
+ document.querySelector('.waterNow').addEventListener('click', function() {
+  element.style.background = greenColor;
+})
+   
+}
+)
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+element = document.getElementById("backyard");
+
+document.getElementById("start").innerHTML = "Start"
+
+function calculateColor() {
+  if (days.length > 2 
+    && (days.length > watered.length)) {
+    element.style.background = deadColor;
+  }if (days.length > 2 && (days.length < watered.length)) 
+    element.style.background = overH20;
+  
+}
+function nextDay() {
+  days.push('')
+  calculateColor()
+
+}
+function waterNow() {
+  element.style.background = greenColor;
+  watered.push('');
+  calculateColor()
+}
+function begin() {
+  element.style.background = greenColor;
+  document.getElementById("start").innerHTML = ""
+  document.getElementById("nextDay").innerHTML = "Next Day"
+  document.getElementById("waterNow").innerHTML = "Water my lawn"
+}
+*/
+
+
+
+
+
