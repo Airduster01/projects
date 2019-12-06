@@ -1,0 +1,199 @@
+var deadColor, iterations, iterations1, iterations2, watered, overH20, element, element1, greenColor, start, water, water1, watered1, watered2;
+iterations = [];
+iterations1 = [];
+iterations2 = [];
+watered = [];
+watered1 = [];
+watered2 = [];
+deadColor = "#fdd33e";
+greenColor = 'rgba(0, 255, 0,1)';
+overH20 = '#827717';
+backyard1 = document.getElementById("backyard1");
+backyard2 = document.getElementById("backyard2")
+backyard3 = document.getElementById("backyard3")
+
+start = document.getElementById("start")
+console.log('WHAT IS START', start)
+
+
+//when I start a game the color of all back yards should be green
+//5 seconds after game start all backyards should turn yellow
+//When the water now button is pressed the yard will turn back to green.
+
+
+function calculateColor() {
+  console.log('CAL COLOR', iterations.length, watered.length)
+  if (iterations.length >= 1
+    && (iterations.length > watered.length)) {
+    backyard1.style.background = deadColor;
+  } if (iterations.length > 2 && iterations.length < watered.length)
+    backyard1.style.background = overH20;
+}
+
+function calculateColor1() {
+  if (iterations1.length >= 1
+    && (iterations1.length > watered1.length)) {
+    backyard2.style.background = deadColor;
+  } if (iterations1.length > 2 && iterations1.length < watered1.length)
+    backyard2.style.background = overH20;
+}
+function calculateColor2() {
+  if (iterations2.length >= 1
+    && (iterations2.length > watered2.length)) {
+    backyard3.style.background = deadColor;
+  } if (iterations2.length > 2 && iterations2.length < watered2.length)
+    backyard3.style.background = overH20;
+}
+
+
+function waterNow() {
+  console.log("waterNow")
+  backyard1.style.background = greenColor;
+  watered.push('');
+  calculateColor()
+  autoTurnYellow()
+}
+
+function waterNow1() {
+  console.log("waterNow1")
+  backyard2.style.background = greenColor;
+  watered1.push('');
+  calculateColor1()
+  autoTurnYellow1()
+}
+
+function waterNow2() {
+  console.log("waterNow2")
+  backyard3.style.background = greenColor;
+  watered2.push('');
+  calculateColor2()
+  autoTurnYellow2()
+}
+var num1 =  backyard1.style.background = greenColor; 
+            document.getElementById("start").innerHTML = ""
+            autoTurnYellow();
+            backyard2.style.display = "none"
+            backyard3.style.display = "none"
+            start.style.display= "none"
+var num2 =  backyard1.style.background = greenColor; 
+            backyard2.style.background = greenColor;  
+            document.getElementById("start").innerHTML = ""
+            autoTurnYellow();
+            autoTurnYellow1();
+            backyard3.style.display = "none"
+            start.style.display= "none"   
+var num3 =    backyard1.style.background = greenColor;
+backyard1.style.background = greenColor;
+backyard2.style.background = greenColor;
+backyard3.style.background = greenColor;
+document.getElementById("start").innerHTML = ""
+autoTurnYellow()
+autoTurnYellow1()
+autoTurnYellow2()
+start.style.display= "none"
+
+
+var numberOfYards = prompt("How Many Lawns Do You Want?", "Number of lawns wanted 1 to 3")
+
+function begin() {
+  if (numberOfYards === 1) {
+  return num1
+  }else if (numberOfYards === 2) {
+    return  num2
+  } else {
+    return num3
+  }
+
+}
+console.log(numberOfYards)
+/*function begin() {
+  backyard1.style.background = greenColor;
+  backyard1.style.background = greenColor;
+  backyard2.style.background = greenColor;
+  backyard3.style.background = greenColor;
+  
+  document.getElementById("start").innerHTML = ""
+  autoTurnYellow()
+  autoTurnYellow1()
+  autoTurnYellow2()
+}
+
+*/
+console.log(begin)
+function autoTurnYellow() {
+  console.log('BOUT TO AUTO')
+  setTimeout(() => {
+    console.log('AUTO YELLOW')
+    iterations.push('')
+    calculateColor();
+  }, getRndInteger(1,5));
+}
+function autoTurnYellow1() {
+  setTimeout(() => {
+    iterations1.push('')
+    calculateColor1();
+  }, getRndInteger(1,5));
+}
+function autoTurnYellow2() {
+  setTimeout(() => {
+    iterations2.push('')
+    calculateColor2();
+  }, getRndInteger(1,5));
+}
+function getRndInteger(min, max) {
+  return (Math.floor(Math.random() * (max - min + 1) ) + min) * 1000
+  
+}
+
+
+
+/*var deadColor, days, watered, overH20, element, greenColor;
+
+days = [];
+watered = [];
+deadColor = "#fdd33e";
+greenColor = 'rgba(0, 255, 0,1)';
+overH20 = '#827717';
+element = document.getElementById("backyard");
+element1 = document.getElementById("backyard1")
+document.querySelector('.waterNow').style.display = 'none';
+document.querySelector('.nextDay').style.display = 'none';
+
+document.querySelector('.start').addEventListener('click', function() {
+
+  document.querySelector('.start').style.display = 'none'
+  document.querySelector('.waterNow').style.display = 'block'
+  document.querySelector('.nextDay').style.display = 'block'
+
+document.querySelector('.nextDay').addEventListener('click', function() {
+  element.style.background = deadColor;
+ })
+
+ document.querySelector('.waterNow').addEventListener('click', function() {
+  element.style.background = greenColor;
+})
+
+
+
+
+}
+)
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
