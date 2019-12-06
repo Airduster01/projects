@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <title>Sprinkler Game</title>
+    <link rel="stylesheet" type="text/css" href="backyard.css">
+</head>
+
+<body>
+
+    <h1>Sprinkler Game</h1>
+    <button id="start" onclick="begin()">Start</button>
+    <button id="nextDay" onclick="nextDay()">Next Day</button>
+
+
+    <div class="backyard" id="backyard1" onclick="waterNow()">
+    </div>
+
+    <div class="backyard1" id="backyard2" onclick="waterNow1()">
+    </div>
+    <div class="backyard2" id="backyard3" onclick="waterNow2()">
+    </div>
+</body>
+
+<script src="script.js"></script>
+
+</html>
