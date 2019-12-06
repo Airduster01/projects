@@ -1,0 +1,17 @@
+#backyard1 {
+    background-color: #fdd33e;
+    height: 200px;
+    width: 800px;
+  }
+#backyard2 {
+    background-color: #fdd33e;
+    height: 200px;
+    width: 800px;
+  }
+  #backyard3 {
+    background-color: #fdd33e;
+    height: 200px;
+    width: 800px;
+  }
+
+
